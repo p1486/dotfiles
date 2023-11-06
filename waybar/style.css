@@ -1,0 +1,123 @@
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: SourceSans3;
+    font-size: 13px;
+}
+
+window#waybar {
+    background-color: #000000;
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 1.0;
+}
+
+window#waybar.solo {
+    background-color: #000000;
+}
+
+window#waybar.termite {
+    background-color: #3F3F3F;
+}
+
+window#waybar.chromium {
+    background-color: #000000;
+    border: none;
+}
+
+button {
+    /* Use box-shadow instead of border so the text isn't offset */
+    box-shadow: inset 0 -3px transparent;
+    /* Avoid rounded borders under each button name */
+    border: none;
+    border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+    background: inherit;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+#workspaces button:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#workspaces button.focused {
+    background-color: #0a0a0a;
+    box-shadow: inset 0 -1px #0000ff;
+}
+
+#workspaces button.urgent {
+    background-color: #FF00FF;
+}
+
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#clock,
+#mpd {
+    padding: 0 8px;
+}
+
+#clock {
+    color: #0000ff;
+}
+
+#scratchpad,
+#mode,
+#cpu,
+#memory {
+    color: #00FFFF
+}
+
+#network {
+    color: #FF00FF
+}
+
+
+#pulseaudio {
+    color: #00FF7F
+}
+
+#window {
+    margin: 0 4px;
+}
+
+#workspaces {
+    margin : 0 8px
+}
+
+/* If workspaces is the leftmost module, omit left margin */
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+/* If workspaces is the rightmost module, omit right margin */
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#scratchpad.empty {
+	background-color: transparent;
+}

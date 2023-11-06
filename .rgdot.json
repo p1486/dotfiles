@@ -1,0 +1,34 @@
+{
+  "name": "dotfiles",
+  "path": "~/dotfiles",
+  "files": [
+    {
+      "path": "~/dotfiles/alacritty",
+      "path_to_symlink": "~/.config/alacritty"
+    },
+    {
+      "path": "~/dotfiles/nvim",
+      "path_to_symlink": "~/.config/nvim"
+    },
+    {
+      "path": "~/dotfiles/sway",
+      "path_to_symlink": "~/.config/sway"
+    },
+    {
+      "path": "~/dotfiles/tmux",
+      "path_to_symlink": "~/.config/tmux"
+    },
+    {
+      "path": "~/dotfiles/waybar",
+      "path_to_symlink": "~/.config/waybar"
+    },
+    {
+      "path": "~/dotfiles/zsh",
+      "path_to_symlink": "~/.config/zsh"
+    },
+    {
+      "path": "~/dotfiles/.zshrc",
+      "path_to_symlink": "~/.zshrc"
+    }
+  ]
+}
