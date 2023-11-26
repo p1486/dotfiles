@@ -57,18 +57,10 @@ require("lazy").setup({
     "romgrk/barbar.nvim",
 
     {
-    'olivercederborg/poimandres.nvim',
+    "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
-    config = function()
-        require('poimandres').setup {
-            bold_vert_split = false,
-            dim_nc_background = true,
-            disable_background = true,
-            disable_float_background = false,
-            disable_italics = false,
-        }
-    end,
+    opts = {},
     },
 
     {
@@ -146,7 +138,7 @@ require('lualine').setup {
 
 require'nvim-treesitter.configs'.setup {
 
-  ensure_installed = { "lua", "rust", "python", "markdown", "markdown_inline", "bash", "yaml", "json", "javascript", "tsx", "typescript"  },
+  ensure_installed = { "lua", "rust", "python", "markdown", "markdown_inline", "bash", "yaml", "json", "javascript", "tsx", "typescript", "go" },
 
   sync_install = false,
 
@@ -167,8 +159,19 @@ require("mason-lspconfig").setup {
         "pyright",
         "clangd",
         "tsserver",
+        "gopls",
+        "bashls",
     }
 }
+require("tokyonight").setup({
+    style = "storm",
+    transparent = true,
+    terminal_colors = true,
+    styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+    },
+})
 require("mason-lspconfig").setup_handlers {
     function(server_name)
         require("lspconfig")[server_name].setup {}
