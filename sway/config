@@ -1,4 +1,4 @@
-set $mod Mod1
+set $mod Mod4
 
 set $left h
 set $down j
@@ -95,7 +95,6 @@ input * {
 
 }
 
-for_window [app_id="Alacritty"] floating enable, resize set 1880 1007
 focus_follows_mouse  no
 default_border pixel 0
 default_floating_border pixel 0

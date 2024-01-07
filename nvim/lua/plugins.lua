@@ -138,7 +138,7 @@ require('lualine').setup {
 
 require'nvim-treesitter.configs'.setup {
 
-  ensure_installed = { "lua", "rust", "python", "markdown", "markdown_inline", "bash", "yaml", "json", "javascript", "tsx", "typescript", "go" },
+  ensure_installed = { "lua", "rust", "python", "markdown", "markdown_inline", "bash", "yaml", "json", "javascript", "tsx", "typescript", "go", "elixir", "cpp", "c", "java"},
 
   sync_install = false,
 
@@ -161,6 +161,8 @@ require("mason-lspconfig").setup {
         "tsserver",
         "gopls",
         "bashls",
+        "elixirls",
+        "jdtls",
     }
 }
 require("tokyonight").setup({

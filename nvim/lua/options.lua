@@ -36,3 +36,20 @@ o.winblend = 20
 c("autocmd TermOpen * :startinsert")
 c("autocmd TermOpen * setlocal norelativenumber")
 c("autocmd TermOpen * setlocal nonumber")
+
+vim.api.nvim_create_augroup("vimrc", { clear = true })
+vim.api.nvim_create_autocmd("VimLeave", {
+    group = "vimrc",
+    pattern = "*.rs",
+    command = ":!rustfmt %"
+})
+vim.api.nvim_create_autocmd("VimLeave", {
+    group = "vimrc",
+    pattern = "*.go",
+    command = ":!go fmt %"
+})
+vim.api.nvim_create_autocmd("VimLeave", {
+    group = "vimrc",
+    pattern = { "*.c", "*.cc", "*.cpp", "*.h", "*.hpp" },
+    command = ":!clang-format -i --style='{ IndentWidth: 4, BasedOnStyle: LLVM}' %"
+})
